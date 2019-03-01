@@ -25,12 +25,14 @@ class Welcome extends CI_Controller {
   
   public function _remap($method, $params = array())
   {
-    // Si el método es "uno" redireccionamos al "dos".
-    if ($method === 'uno') {
-      $this->_dos();
-    } else {
-      // En caso contrario se redirecciona al método solicitado.
-      $this->$method();
+    switch ($method) {
+      case 'uno':
+        $this->_dos();
+        break;
+      
+      default:
+        // $this->_dos();
+        break;
     }
   }
 

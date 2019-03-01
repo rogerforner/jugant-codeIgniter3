@@ -101,6 +101,27 @@ public function _dos()
 
 > En "_remap()" `$this->_dos();` y el método `public function _dos()`.
 
+---
+
+**RECOMENDACIÓN**
+
+Es recomendable utilizar un _switch_ en vez de un condicional _if_:
+
+```php
+public function _remap($method, $params = array())
+{
+  switch ($method) {
+    case 'uno':
+      $this->_dos();
+      break;
+    
+    default:
+      // $this->_dos();
+      break;
+  }
+}
+```
+
 ## Vista
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/views.html)
