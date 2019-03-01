@@ -74,6 +74,33 @@ public function dos()
 }
 ```
 
+Podemos **proteger** un método remapeado insertando un guión bajo delante del nombre del método `_metodo()`.
+
+Por ejemplo, queremos lo siguiente:
+
+- `http://localhost/codeigniter/index.php/welcome/uno` redireccionará al método "dos".
+- `http://localhost/codeigniter/index.php/welcome/dos` no se podrá acceder.
+
+```php
+public function _remap($method, $params = array())
+{
+  // Si el método es "uno" redireccionamos al "dos".
+  if ($method === 'uno') {
+    $this->_dos();
+  } else {
+    // En caso contrario se redirecciona al método solicitado.
+    $this->$method();
+  }
+}
+
+public function _dos()
+{
+  echo 'Método Dos';
+}
+```
+
+> En "_remap()" `$this->_dos();` y el método `public function _dos()`.
+
 ## Vista
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/views.html)

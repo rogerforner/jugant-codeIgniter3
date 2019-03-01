@@ -27,14 +27,14 @@ class Welcome extends CI_Controller {
   {
     // Si el método es "uno" redireccionamos al "dos".
     if ($method === 'uno') {
-      $this->dos();
+      $this->_dos();
     } else {
       // En caso contrario se redirecciona al método solicitado.
       $this->$method();
     }
   }
 
-  public function dos()
+  public function _dos()
   {
     echo 'Método Dos';
   }
