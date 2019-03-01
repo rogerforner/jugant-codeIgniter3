@@ -1,8 +1,20 @@
 > Aprendiendo CodeIgniter 3
 
-# MVC
+---
 
-## Controlador
+**Tabla de contenidos**
+
+- [1. MVC](#1-mvc)
+  - [1.1. Controlador](#11-controlador)
+    - [1.1.1. Métodos](#111-métodos)
+  - [1.2. Vista](#12-vista)
+- [2. Rutas](#2-Rutas)
+
+---
+
+# 1. MVC
+
+## 1.1. Controlador
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/controllers.html)
 
@@ -52,7 +64,7 @@ Si tenemos el controlador "Welcome" y el método "uno":
 
 - `http://localhost/codeigniter/index.php/welcome/uno`
 
-#### Redireccionar método hacia otro.
+**Redireccionar métodos**
 
 Cuando se requiera redireccionar un método hacia otro utilizamos el método **_remap()**, cuyo siempre será *el primero en llamarse* por CodeIgniter.
 
