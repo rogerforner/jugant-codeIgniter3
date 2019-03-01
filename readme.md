@@ -8,7 +8,7 @@
   - [1.1. Controlador](#11-controlador)
     - [1.1.1. Métodos](#111-métodos)
   - [1.2. Vista](#12-vista)
-- [2. Rutas](#2-Rutas)
+- [2. Rutas](#2-rutas)
 
 ---
 
