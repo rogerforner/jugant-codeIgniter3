@@ -56,7 +56,7 @@ class Welcome extends CI_Controller {
 }
 ```
 
-### Métodos
+### 1.1.1. Métodos
 
 A través de la URL podemos acceder: `http://localhost/codeigniter/index.php/CONTROLADOR/METODO`
 
@@ -134,7 +134,7 @@ public function _remap($method, $params = array())
 }
 ```
 
-## Vista
+## 1.2. Vista
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/views.html)
 
@@ -145,7 +145,7 @@ A través del controlador llamamos las vistas, cuyas pueden estar en _php_ (por 
 - **PHP**: CONTROLLER `$this->load->view('nombre_vista');` y VIEW `nombre_vista.php`.
 - **HTML**: CONTROLLER `$this->load->view('nombre_vista.html');` y VIEW `nombre_vista.html`.
 
-# Rutas
+# 2. Rutas
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/routing.html)
 
