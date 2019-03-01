@@ -21,5 +21,17 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
+  }
+  
+  public function uno()
+	{
+    // http://localhost/codeigniter/index.php/welcome/uno
+		echo 'Método Uno';
+  }
+  
+  public function dos()
+	{
+    // http://localhost/codeigniter/index.php/welcome/dos
+		echo 'Método Dos';
 	}
 }
