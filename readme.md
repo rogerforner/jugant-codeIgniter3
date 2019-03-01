@@ -12,6 +12,7 @@
 
 ---
 
+
 # 1. MVC
 
 ## 1.1. Controlador
@@ -55,6 +56,7 @@ class Welcome extends CI_Controller {
 	}
 }
 ```
+
 
 ### 1.1.1. Métodos
 
@@ -113,8 +115,6 @@ public function _dos()
 
 > En "_remap()" `$this->_dos();` y el método `public function _dos()`.
 
----
-
 **RECOMENDACIÓN**
 
 Es recomendable utilizar un _switch_ en vez de un condicional _if_:
@@ -134,6 +134,7 @@ public function _remap($method, $params = array())
 }
 ```
 
+
 ## 1.2. Vista
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/views.html)
@@ -144,6 +145,7 @@ A través del controlador llamamos las vistas, cuyas pueden estar en _php_ (por 
 
 - **PHP**: CONTROLLER `$this->load->view('nombre_vista');` y VIEW `nombre_vista.php`.
 - **HTML**: CONTROLLER `$this->load->view('nombre_vista.html');` y VIEW `nombre_vista.html`.
+
 
 # 2. Rutas
 
