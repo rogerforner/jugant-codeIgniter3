@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
         break;
       
       default:
-        // $this->_dos();
+        $this->index();
         break;
     }
   }
