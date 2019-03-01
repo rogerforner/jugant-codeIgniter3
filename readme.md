@@ -54,3 +54,19 @@ A través del controlador llamamos las vistas, cuyas pueden estar en _php_ (por 
 
 - **PHP**: CONTROLLER `$this->load->view('nombre_vista');` y VIEW `nombre_vista.php`.
 - **HTML**: CONTROLLER `$this->load->view('nombre_vista.html');` y VIEW `nombre_vista.html`.
+
+# Rutas
+
+> [Documentación](https://www.codeigniter.com/user_guide/general/routing.html)
+
+Las rutas o _routes_ se encuentran en `/config/routes.php`.
+
+Existen 3 rutas reservadas:
+
+```php
+$route['default_controller'] = 'welcome';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+```
+
+> Con la primera ruta definimos el controlador por defecto `$route['default_controller'] = 'NombreControlador';`.
