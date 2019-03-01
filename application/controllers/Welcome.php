@@ -23,15 +23,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
   }
   
-  public function uno()
-	{
-    // http://localhost/codeigniter/index.php/welcome/uno
-		echo 'Método Uno';
+  public function _remap($method, $params = array())
+  {
+    // Si el método es "uno" redireccionamos al "dos".
+    if ($method === 'uno') {
+      $this->dos();
+    } else {
+      // En caso contrario se redirecciona al método solicitado.
+      $this->$method();
+    }
   }
-  
+
   public function dos()
-	{
-    // http://localhost/codeigniter/index.php/welcome/dos
-		echo 'Método Dos';
-	}
+  {
+    echo 'Método Dos';
+  }
 }

@@ -44,6 +44,36 @@ class Welcome extends CI_Controller {
 }
 ```
 
+### Métodos
+
+A través de la URL podemos acceder: `http://localhost/codeigniter/index.php/CONTROLADOR/METODO`
+
+Si tenemos el controlador "Welcome" y el método "uno":
+
+- `http://localhost/codeigniter/index.php/welcome/uno`
+
+#### Redireccionar método hacia otro.
+
+Cuando se requiera redireccionar un método hacia otro utilizamos el método **_remap()**, cuyo siempre será *el primero en llamarse* por CodeIgniter.
+
+```php
+public function _remap($method, $params = array())
+{
+  // Si el método es "uno" redireccionamos al "dos".
+  if ($method === 'uno') {
+    $this->dos();
+  } else {
+    // En caso contrario se redirecciona al método solicitado.
+    $this->$method();
+  }
+}
+
+public function dos()
+{
+  echo 'Método Dos';
+}
+```
+
 ## Vista
 
 > [Documentación](https://www.codeigniter.com/user_guide/general/views.html)
