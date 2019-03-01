@@ -20,6 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo 'Hola carambola!';
+		$this->load->view('welcome_message');
 	}
 }
