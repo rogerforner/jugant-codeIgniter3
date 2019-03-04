@@ -31,7 +31,9 @@ class Welcome extends CI_Controller {
       "Cinta"
     );
 
-		$this->load->view('welcome_message', compact("numbers", "names"));
+    $this->load->view('partials/header');
+    $this->load->view('welcome_message', compact("numbers", "names"));
+    $this->load->view('partials/footer.html');
   }
   
   public function _remap($method, $params = array())
