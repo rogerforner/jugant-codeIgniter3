@@ -68,7 +68,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<pre><?php print_r($data); ?></pre>
+  <strong>Números</strong>
+  <pre><?php print_r($numbers); ?></pre>
+  
+  <hr>
+  <strong>Nombres</strong>
+  <pre><?php print_r($names); ?></pre>
 </div>
 
 </body>

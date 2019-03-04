@@ -20,13 +20,18 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-    $data = array(
+    $numbers = array(
       "1" => "uno",
       "2" => "dos",
-      "3" => "tres...",
+      "3" => "tres..."
+    );
+    $names = array(
+      "Roger",
+      "Inco",
+      "Cinta"
     );
 
-		$this->load->view('welcome_message', compact("data"));
+		$this->load->view('welcome_message', compact("numbers", "names"));
   }
   
   public function _remap($method, $params = array())
